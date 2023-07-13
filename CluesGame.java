@@ -129,27 +129,25 @@ public class CluesGame {
          accusecompare(accusation,guilty);
         return accusation;}
     public static void guesscompare(String[]guesses, String[]guilty){ //Compares the guessed charaters to the guilty and regardless of the result a clue is provided
-        if (guesses[0] == guilty[0]) {
-            if (guesses[1] == guilty[1]) {
-                if (guesses[2] == guilty[2]) {
+        if (guesses[0].trim().equals(guilty[0].trim())) {
+            if (guesses[1].trim().equals(guilty[1].trim())) {
+                if (guesses[2].trim().equals(guilty[2].trim())) {
                    System.out.println("no clue");
-                } else {
-                    System.out.println("Your clue:" + guilty[2]);
-                } }
-                else{
-                            System.out.println("Your clue:" + guilty[1]);}
-                        }
-                else{
-                            System.out.println("Your clue:" + guilty [0]);}
-
-    
-     
+                }
+            }
+            else{
+                    System.out.println("Your clue:" + guilty[1]);
+            }
+        }
+        else{
+                System.out.println("Your clue:" + guilty [0]);
+        }
     }
     public static void accusecompare(String[]accusation, String[]guilty){ //compares the users accused charaters to the guilty and responds with win or lose based on the result.
-if(accusation[0]==guilty[0] || guilty[1]==accusation[1] || accusation[2]==guilty[2]){
-             System.out.println("Congratulations. You caught the avatar");
+        if(accusation[0].trim().equals(guilty[0]) || accusation[1].trim().equals(guilty[1]) || accusation[2].trim().equals(guilty[2])){
+            System.out.println("Congratulations. You caught the avatar");
          }else{
-             System.out.println("The avatar has gotten away. You failed to capture Avatar "+guilty[0]+" with the "+guilty[1]+" Element in the "+guilty[2]+".");
-         }
-     }
+            System.out.println("The avatar has gotten away. You failed to capture Avatar "+guilty[0]+" with the "+guilty[1]+" Element in the "+guilty[2]+".");
+        }
+    }
 }
