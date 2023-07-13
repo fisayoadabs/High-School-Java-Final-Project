@@ -40,29 +40,22 @@ public class CluesGame {
     }
         }
     public static String[]Guilty(){ // creates all charaters weapons and rooms. Additionally decides the guilty aspects
-        //String[] guilty=new String[3];
         String[] Names= new String[]{"Aang", "Korra", "Roku", "Wan", "Kiyoshi", "Yang"};
         String[]Weapons=new String[]{"Air", "Water", "Fire", "Earth", "Metal", "Lightning"};
         String[]Locations= new String[]{"Fire Nation", "Earth Kingdom", "Ba Sin Se", "FireLord Palace", "Water Tribe", "Air Temple"};
         Random rand = new Random();  
         int randomName=rand.nextInt(Names.length);
       	guilty[0]=(Names[randomName]);
-        //int suspect =Integer.parseInt(Names[randomName]);
         Random ran = new Random();  
         int randomWeapon=ran.nextInt(Weapons.length);
       	guilty[1]=(Weapons[randomWeapon]);
-        //int element =Integer.parseInt(Weapons[randomWeapon]);
         Random rad = new Random();  
         int randomLocation=rad.nextInt(Locations.length);
       	guilty[2]=(Locations[randomLocation]);
-        //int room =Integer.parseInt(Locations[randomLocation]);
-        //System.out.println(Arrays.toString(Names));
-        //System.out.println("Yes"+guilty[0]+"No" +guilty[1]+"Yesno" +guilty[2]);
         return guilty; }
    
     public static String[] position(){ //Decides if player is in a room or not to allow guessing. And allows secret pasages to other rooms
         int number=(int)(Math.random() * (max - min + 1) + min);
-        //System.out.println(number);
         String[]room= new String[]{"Fire Nation", "Earth Kingdom", "Ba Sin Se", "FireLord Palace", "Water Tribe", "Air Temple"};    
         if (number==1){
         Random rad = new Random();  
